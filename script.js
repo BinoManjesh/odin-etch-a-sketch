@@ -10,6 +10,13 @@ function onClick() {
     }
 }
 
+function changeColor(e) {
+    switch(e.buttons) {
+        case 1: case 3: case 5: case 9: case 17:
+            e.target.style.backgroundColor = "black";
+    }
+}
+
 function changeGridSize(gridSize) {
     body.removeChild(grid);
     grid = document.createElement("div");
@@ -20,6 +27,8 @@ function changeGridSize(gridSize) {
         for (let j = 1; j <= gridSize; ++j) {
             let cell = document.createElement("div");
             cell.classList.add("cell");
+            cell.addEventListener("mousemove", changeColor);
+            cell.addEventListener("mousedown", changeColor);
             row.appendChild(cell);
         }
         grid.appendChild(row);

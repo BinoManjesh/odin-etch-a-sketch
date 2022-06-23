@@ -12,7 +12,7 @@ div.grid {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 960px;
+    height: 800px;
 }
 
 div.grid * {
@@ -22,7 +22,7 @@ div.grid * {
 div.row {
     display: flex;
     justify-content: center;
-    width: 960px;
+    width: 800px;
 }
 
 div.cell {
